@@ -19,7 +19,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # common msm8960 configs
 $(call inherit-product, device/htc/msm8960-common/msm8960.mk)
 # call the proprietary setup
-$(call inherit-product-if-exists, vendor/htc/vendor_onesv/k2_cl-vendor.mk)
+$(call inherit-product-if-exists, vendor/htc/k2_cl/k2_cl-vendor.mk)
 # Overlay files
 DEVICE_PACKAGE_OVERLAYS += device/htc/k2_cl/overlay
 
