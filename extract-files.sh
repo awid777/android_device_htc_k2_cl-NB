@@ -1,7 +1,7 @@
 #!/bin/sh
 
 VENDOR=htc
-DEVICE=k2cl
+DEVICE=k2_cl
 
 BASE=../../../vendor/$VENDOR/$DEVICE/proprietary
 rm -rf $BASE/*

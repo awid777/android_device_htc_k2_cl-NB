@@ -1,4 +1,4 @@
-k2_ul
+Device Tree for Boost HTC One SV (k2_cl)
 =====
 
-k2_ul
+Status: UNKNOWN

@@ -1,4 +1,4 @@
-import init.k2_ul.usb.rc
+import init.k2_cl.usb.rc
 
 on early-init
     mkdir /storage 0050 system sdcard_r
@@ -23,7 +23,7 @@ on emmc-fs
     mkdir /tombstones/lpass 0771 system system
     
     # mount all mmc partitions
-    mount_all /fstab.k2_ul
+    mount_all /fstab.k2_cl
 on post-fs-data
     # double check perms and set owner
     chown root root /devlog

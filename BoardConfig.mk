@@ -26,8 +26,8 @@
 
 
 #Built from source kernel
- # TARGET_KERNEL_CONFIG	:= k2_ul_defconfig
- # TARGET_KERNEL_SOURCE	:= kernel/k2_ul
+ # TARGET_KERNEL_CONFIG	:= k2_cl_defconfig
+ # TARGET_KERNEL_SOURCE	:= kernel/k2_cl
  # TARGET_ARH	:= arm
 
 # inherit from common msm8960
@@ -35,7 +35,7 @@
 
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := k2_ul
+TARGET_BOOTLOADER_BOARD_NAME := k2_cl
 
 # Platform
 # TARGET_BOARD_PLATFORM := msm8960
@@ -59,7 +59,7 @@ TARGET_SCREEN_WIDTH := 480
 # BOARD_HAVE_HTC_AUDIO := true
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/k2_ul/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/k2_cl/bluetooth
 
 # FM radio
 # BOARD_HAVE_QCOM_FM := true
@@ -74,7 +74,7 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/k2_ul/bluetooth
 # TARGET_NO_HW_VSYNC := true
 # TARGET_USES_C2D_COMPOSITION := true
 # TARGET_USES_ION := true
-# BOARD_EGL_CFG := device/htc/k2_ul/configs/egl.cfg
+# BOARD_EGL_CFG := device/htc/k2_cl/configs/egl.cfg
 
 # HWComposer
 # BOARD_USES_HWCOMPOSER := true
@@ -103,7 +103,7 @@ BOARD_KERNEL_BASE := 0x80400000
 BOARD_RAMDISK_BASE:= 0x81808000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x0148000
-TARGET_PREBUILT_KERNEL := device/htc/k2_ul/prebuilt/kernel
+TARGET_PREBUILT_KERNEL := device/htc/k2_cl/prebuilt/kernel
 TARGET_KERNEL_CONFIG := k2_ul_defconfig
 # BOARD_FORCE_RAMDISK_ADDRESS := 0x81808000
 
@@ -116,14 +116,15 @@ BOARD_PROVIDES_LIBRIL := true
 #mmcblk0p22: 000ffa00 00000200 "misc"
 #mmcblk0p21: 00fffe00 00000200 "recovery"
 #mmcblk0p20: 01000000 00000200 "boot"
-#mmcblk0p33: 67fffc00 00000200 "system"
+#mmcblk0p35: 54fffc00 00000200 "system"
 #mmcblk0p29: 00140200 00000200 "local"
-#mmcblk0p34: 0ffffe00 00000200 "cache"
-#mmcblk0p35: 97fffe00 00000200 "userdata"
+#mmcblk0p36: 0dfffe00 00000200 "cache"
+#mmcblk0p37: 49fffe00 00000200 "userdata"
 #mmcblk0p25: 01400000 00000200 "devlog"
 #mmcblk0p27: 00040000 00000200 "pdata"
-#mmcblk0p36: 27be00000 00000200 "fat"
+#mmcblk0p38: 1097fe000 00000200 "fat"
 #mmcblk0p30: 00010000 00000200 "extra"
+#mmcblk0p32: 01900000 00000200 "carrier"
 #mmcblk0p16: 02d00000 00000200 "radio"
 #mmcblk0p17: 00a00000 00000200 "adsp"
 #mmcblk0p15: 00100000 00000200 "dsps"
@@ -131,8 +132,8 @@ BOARD_PROVIDES_LIBRIL := true
 #mmcblk0p19: 007ffa00 00000200 "radio_config"
 #mmcblk0p23: 00400000 00000200 "modem_st1"
 #mmcblk0p24: 00400000 00000200 "modem_st2"
-#mmcblk0p31: 00100000 00000200 "cdma_record"
-#mmcblk0p32: 06069e00 00000200 "reserve" 
+#mmcblk0p31: 00040000 00000200 "skylink"
+#mmcblk0p33: 00100000 00000200 "cdma_record"
 
 # Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
@@ -143,14 +144,14 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 1241513472
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 # to enable the GPS HAL
-# BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := k2_ul
+# BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := k2_cl
 
 # AMSS version to use for GPS
 # BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 3200
 
 # Vold
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
-BOARD_VOLD_MAX_PARTITIONS := 36
+BOARD_VOLD_MAX_PARTITIONS := 38
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 
 # Lights
